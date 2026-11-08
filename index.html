@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#172a33">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>KameyMall spreadsheet — kategorie, rozmiary i poradnik QC</title>
+  <meta name="description" content="KameyMall spreadsheet po polsku: odkrywaj kategorie, porównuj rozmiary, sprawdzaj zdjęcia QC i planuj pełny koszt zakupu. Przewodnik z linkami do cafans.com.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="KameyMall spreadsheet — wybieraj z większą pewnością">
+  <meta property="og:description" content="Praktyczny przewodnik po kategoriach, dopasowaniu, zdjęciach QC i kosztach zamówienia. Odkrywaj produkty w cafans.com.">
+  <meta property="og:image" content="https://www.tike.gr/files/images/products/media/CW2/CW2288-111/images/CW2288-111.jpg.webp">
+  <meta property="og:image:alt" content="Biały but Nike Air Force 1 ’07 widziany z boku">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KameyMall spreadsheet — poradnik po polsku">
+  <meta name="twitter:description" content="Kategorie, rozmiary, kontrola zdjęć QC i planowanie budżetu przed zakupem.">
+  <meta name="twitter:image" content="https://www.tike.gr/files/images/products/media/CW2/CW2288-111/images/CW2288-111.jpg.webp">
+
+  <!--
+    Plik: index.html
+    Uwaga badawcza: bezpośrednia strona wyników Bing była niedostępna.
+    Nie potwierdzono więc kolejności ani dziesięciu wyników pierwszej strony Bing.
+    Alternatywne wyszukiwanie dostarczyło poniższe zasoby tematyczne:
+    https://kameymall-sheet.com/
+    https://chinareptools.com/spreadsheet-search-kameymall
+    https://www.kameymallspreadsheets.com/
+    https://kameymallspreadsheet.org/
+    https://www.kameymalltable.com/
+    https://kameymallspreadsheet.com/
+    https://repfolio.cc/
+    https://spreadsheet-kameymall.com/
+    https://pikobuy.org/agent-spreadsheet-guide.html
+    https://kameymall.de/
+    Repfolio i poradnik PikoBuy były dostępne tylko jako fragmenty wyników.
+    Wspólne tematy: kategorie produktów, finds, rozmiary, zdjęcia QC,
+    identyfikacja oferty i planowanie kosztów. Tekst strony jest oryginalny.
+    Nie przeniesiono twierdzeń o opłatach, ocenach, dostępności ani gwarancjach.
+
+    Frazy pomocnicze:
+    KameyMall finds; KameyMall QC; KameyMall poradnik;
+    KameyMall rozmiary; KameyMall koszty wysyłki.
+
+    Intencje długiego ogona rozwinięte w treści:
+    jak korzystać z KameyMall spreadsheet; kategorie produktów KameyMall;
+    jak porównać oferty przed zakupem; jak sprawdzić wariant produktu;
+    jak zapisać link do oferty; jak sprawdzić sprzedawcę;
+    jak dobrać rozmiar butów; długość wkładki w centymetrach;
+    tabela rozmiarów bluzy; szerokość koszulki pod pachami;
+    długość rękawa kurtki; obwód pasa spodni;
+    dopasowanie czapki z regulacją; wymiary torby i akcesoriów;
+    jak czytać zdjęcia QC; kontrola szwów na zdjęciach;
+    porównanie koloru produktu; sprawdzanie metki rozmiarowej;
+    czy zdjęcia potwierdzają autentyczność; koszt całego zamówienia;
+    cena produktu a koszt dostawy; waga rzeczywista i gabarytowa;
+    jak porównać opcje wysyłki; co sprawdzić przed płatnością;
+    czy spreadsheet gwarantuje dostępność; gdzie prowadzą linki;
+    lista kontrolna przed zamówieniem; jak ocenić warunki zwrotu.
+  -->
+
+  <style>
+    :root {
+      --ink: #172a33;
+      --muted: #53636a;
+      --paper: #f5f3eb;
+      --white: #fff;
+      --line: #d8dcd5;
+      --lime: #dfef92;
+      --orange: #f1b585;
+      --radius: 22px;
+      --width: 1200px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+      -webkit-text-size-adjust: 100%;
+    }
+    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    a:focus-visible, summary:focus-visible {
+      outline: 3px solid #b54a13;
+      outline-offset: 5px;
+    }
+    img { display: block; max-width: 100%; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { line-height: 1.12; letter-spacing: -.035em; }
+    h1 { font-size: clamp(2.5rem, 5.3vw, 4.6rem); margin-bottom: 24px; }
+    h2 { font-size: clamp(1.9rem, 3.2vw, 2.85rem); margin-bottom: 20px; }
+    h3 { font-size: 1.27rem; margin-bottom: 12px; }
+    p { margin-bottom: 18px; }
+    .wrap { width: min(var(--width), calc(100% - 48px)); margin: auto; }
+    .masthead {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 90px;
+      border-bottom: 1px solid var(--line);
+    }
+    .logo { font-size: 1.55rem; font-weight: 850; letter-spacing: -.06em; text-decoration: none; }
+    .logo span { color: #60713b; }
+    .masthead p { margin: 0; font-size: .84rem; color: var(--muted); }
+    .header-action { font-size: .88rem; font-weight: 700; white-space: nowrap; }
+    .categories { padding: 27px 0 30px; }
+    .category-intro {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 12px; margin-bottom: 13px;
+    }
+    .category-intro h2 { font-size: .82rem; letter-spacing: .12em; margin: 0; text-transform: uppercase; }
+    .category-intro p { font-size: .78rem; margin: 0; color: var(--muted); }
+    .category-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+    .category-grid a {
+      display: flex; align-items: center; gap: 10px;
+      min-height: 55px; padding: 10px 12px;
+      border: 1px solid var(--line); border-radius: 9px;
+      background: #ffffff80; text-decoration: none; font-size: .82rem; font-weight: 650;
+    }
+    .category-grid a:hover { background: var(--lime); border-color: #a1af6d; }
+    .category-grid span { color: #6c7772; font-size: .67rem; font-variant-numeric: tabular-nums; }
+    .hero {
+      display: grid; grid-template-columns: 1.1fr 1fr;
+      background: var(--ink); color: white;
+      border-radius: var(--radius); overflow: hidden;
+    }
+    .hero-copy { padding: clamp(28px, 4vw, 54px); align-self: center; }
+    .eyebrow { font-size: .73rem; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; }
+    .hero .eyebrow { color: var(--lime); margin-bottom: 22px; }
+    .hero-copy > p:not(.eyebrow) { color: #dbe2e2; max-width: 49ch; }
+    .hero-copy .disclosure { font-size: .76rem; margin: 21px 0 0; color: #c2cece; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 28px; padding: 14px 21px; border-radius: 8px;
+      background: var(--lime); color: var(--ink);
+      text-decoration: none; font-size: .9rem; font-weight: 750;
+    }
+    .button:hover { background: #edf8ba; }
+    .hero-art { background: #fff; margin: 16px; border-radius: 14px; display: flex; flex-direction: column; }
+    .hero-art img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+    .hero-art figcaption {
+      display: flex; justify-content: space-between; gap: 15px;
+      padding: 18px 23px; border-top: 1px solid #e5e8e4;
+      color: var(--ink); font-size: .76rem;
+    }
+    .hero-art figcaption span { color: var(--muted); }
+    .answer {
+      display: grid; grid-template-columns: .65fr 1.35fr; gap: 36px;
+      padding: 37px 0; border-bottom: 1px solid var(--line);
+    }
+    .answer h2 { font-size: 1.35rem; margin: 0; }
+    .answer p { margin: 0; color: var(--muted); max-width: 80ch; }
+    .section { padding: 65px 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-bottom: 28px; }
+    .section-head h2 { max-width: 650px; margin-bottom: 0; }
+    .section-head > p { max-width: 310px; margin: 0; font-size: .88rem; color: var(--muted); }
+    .edit-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .edit-card { margin: 0; }
+    .image-link { display: block; background: white; border-radius: 15px; overflow: hidden; }
+    .image-link img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+    .edit-card figcaption { padding: 17px 3px 0; }
+    .edit-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .edit-card p { color: var(--muted); font-size: .84rem; margin-bottom: 11px; }
+    .text-link { font-size: .8rem; font-weight: 750; }
+    .photo-note { font-size: .76rem; color: var(--muted); margin: 24px 0 0; max-width: 95ch; }
+    .method { background: #e7eadd; border-radius: var(--radius); padding: 38px; }
+    .method-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 29px; }
+    .number {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 39px; height: 39px; border: 1px solid #bac2af;
+      border-radius: 50%; margin-bottom: 20px; font-size: .8rem;
+    }
+    .method p { font-size: .92rem; color: #46534d; }
+    .method h2 { max-width: 660px; }
+    .article-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .article {
+      padding: 30px; background: #fffdf8; border: 1px solid var(--line);
+      border-radius: 15px;
+    }
+    .article .eyebrow { color: #667247; margin-bottom: 16px; }
+    .article h3 { font-size: 1.5rem; }
+    .article p, .article li { color: var(--muted); font-size: .91rem; }
+    .article ul { padding-left: 19px; margin-bottom: 0; }
+    .article li + li { margin-top: 9px; }
+    .table-scroll { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; min-width: 540px; font-size: .89rem; }
+    caption { text-align: left; font-size: .83rem; color: var(--muted); padding-bottom: 17px; }
+    th, td { padding: 18px 17px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+    thead { background: var(--ink); color: white; }
+    tbody th { width: 24%; font-weight: 700; }
+    tbody td { color: var(--muted); }
+    .budget {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 45px;
+      padding: 38px; background: var(--orange); border-radius: var(--radius);
+    }
+    .budget p { margin-bottom: 0; }
+    .budget ol { padding-left: 22px; margin: 0; }
+    .budget li + li { margin-top: 11px; }
+    .faq-layout { display: grid; grid-template-columns: .75fr 1.25fr; gap: 55px; }
+    .faq-intro p { color: var(--muted); font-size: .9rem; }
+    details { border-bottom: 1px solid var(--line); }
+    details:first-child { border-top: 1px solid var(--line); }
+    summary { cursor: pointer; padding: 21px 25px 21px 0; font-weight: 700; line-height: 1.4; }
+    details p { font-size: .91rem; color: var(--muted); padding: 0 20px 4px 0; }
+    .closing {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 25px; border-top: 1px solid var(--line); padding: 32px 0;
+    }
+    .closing h2 { font-size: 1.5rem; margin: 0; }
+    .closing p { margin: 8px 0 0; color: var(--muted); font-size: .85rem; }
+    footer { border-top: 1px solid var(--line); padding: 27px 0; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 30px; }
+    footer p { font-size: .75rem; color: var(--muted); margin: 0; max-width: 800px; }
+    footer a { font-weight: 750; font-size: .85rem; white-space: nowrap; }
+    @media (max-width: 950px) {
+      .category-grid { grid-template-columns: repeat(3, 1fr); }
+      .hero { grid-template-columns: 1fr 1fr; }
+      .hero-copy { padding: 30px; }
+      .edit-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 18px; }
+      .method-grid { gap: 20px; }
+      .faq-layout { gap: 30px; }
+    }
+    @media (max-width: 650px) {
+      .wrap { width: calc(100% - 32px); }
+      .masthead { min-height: 75px; gap: 10px; flex-wrap: wrap; padding: 16px 0; }
+      .masthead p { display: none; }
+      .logo { font-size: 1.35rem; }
+      .header-action { font-size: .75rem; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .category-grid a { min-height: 54px; font-size: .77rem; padding: 9px; gap: 7px; }
+      .category-intro { display: block; }
+      .category-intro p { margin-top: 6px; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-copy { padding: 30px 24px 21px; }
+      .hero-art { margin: 0 13px 13px; }
+      .hero-art img { aspect-ratio: 1.2; }
+      .hero-art figcaption { padding: 15px; }
+      .answer, .method-grid, .article-grid, .budget, .faq-layout { grid-template-columns: 1fr; gap: 24px; }
+      .answer { padding: 29px 0; }
+      .section { padding: 43px 0; }
+      .section-head { display: block; }
+      .section-head > p { margin-top: 16px; max-width: none; }
+      .edit-grid { gap: 24px 13px; }
+      .edit-card h3 { font-size: .96rem; }
+      .edit-card p { font-size: .79rem; }
+      .method, .budget, .article { padding: 25px; }
+      .method-grid { gap: 14px; }
+      .number { margin-bottom: 13px; }
+      .closing, .footer-inner { align-items: flex-start; flex-direction: column; gap: 20px; }
+      .button { min-height: 48px; }
+      summary { font-size: .94rem; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .category-grid a, .button { transition: background-color .15s ease; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "#strona",
+        "name": "KameyMall spreadsheet — kategorie, rozmiary i poradnik QC",
+        "description": "Niezależny przewodnik po wyborze produktów, porównywaniu rozmiarów, zdjęciach QC i planowaniu kosztów. Linki zakupowe prowadzą do cafans.com.",
+        "inLanguage": "pl",
+        "about": {
+          "@type": "Thing",
+          "name": "KameyMall spreadsheet",
+          "description": "Arkusz lub katalog pomagający uporządkować linki i informacje o produktach przed zakupem."
+        },
+        "hasPart": [
+          {"@id": "#artykul-rozmiary"},
+          {"@id": "#artykul-qc"},
+          {"@id": "#pytania"}
+        ]
+      },
+      {
+        "@type": "Article",
+        "@id": "#artykul-rozmiary",
+        "headline": "KameyMall rozmiary: centymetry przed oznaczeniem",
+        "inLanguage": "pl",
+        "articleBody": "Porównuj wymiary konkretnej oferty z ubraniem, które już dobrze leży. Dla butów sprawdź długość stopy i sposób pomiaru w tabeli. Dla koszulek i bluz porównaj szerokość pod pachami, długość i rękawy. W spodniach sprawdź pas, biodra i długość nogawki. Nie zakładaj, że oznaczenie M lub rozmiar EU jest jednakowe u różnych sprzedawców.",
+        "isPartOf": {"@id": "#strona"}
+      },
+      {
+        "@type": "Article",
+        "@id": "#artykul-qc",
+        "headline": "KameyMall QC: od ogólnego ujęcia do szczegółu",
+        "inLanguage": "pl",
+        "articleBody": "Najpierw sprawdź zgodność modelu, koloru, rozmiaru i liczby sztuk. Następnie obejrzyj szwy, nadruk, zapięcia i widoczne uszkodzenia. Przy niejasnym zdjęciu poproś o zbliżenie lub pomiar. Zdjęcia QC pomagają ocenić widoczny stan produktu, ale nie potwierdzają samodzielnie jego autentyczności ani trwałości.",
+        "isPartOf": {"@id": "#strona"}
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "#pytania",
+        "inLanguage": "pl",
+        "isPartOf": {"@id": "#strona"},
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Czym jest KameyMall spreadsheet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To arkusz lub katalog do porządkowania linków i informacji o produktach. Ułatwia porównanie kategorii, wariantów i rozmiarów, ale aktualne dane trzeba sprawdzić w konkretnej ofercie."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy to oficjalna strona KameyMall?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie. To niezależny przewodnik po polsku. Nie reprezentuje KameyMall ani pokazanych marek. Przyciski zakupowe prowadzą do cafans.com, a nie do KameyMall."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy zdjęcia pokazują produkty dostępne w cafans.com?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Zdjęcia są ilustracjami stylu i kategorii, a nie potwierdzeniem oferty. Sprawdź na stronie docelowej, czy konkretny model, wariant i rozmiar są dostępne."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Jak dobrać rozmiar butów i ubrań?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Korzystaj z tabeli konkretnej oferty i porównuj centymetry. Dla butów ustal, czy tabela podaje długość stopy czy wkładki; dla ubrań porównaj pomiary z dobrze dopasowaną rzeczą."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy zdjęcia QC potwierdzają autentyczność?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nie. Zdjęcia QC pomagają ocenić widoczny stan i zgodność wariantu z zamówieniem. Same nie stanowią dowodu autentyczności, składu materiału ani trwałości."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy cena produktu jest pełnym kosztem zamówienia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Niekoniecznie. Sprawdź dostawę lokalną i międzynarodową, ewentualne opłaty za obsługę, płatność i pakowanie oraz podatki i należności właściwe dla miejsca dostawy. Nie doliczaj ponownie kwot już zawartych w rozliczeniu."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Co zrobić, gdy link lub wariant przestaje działać?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Wróć do odpowiedniej kategorii w cafans.com i wyszukaj produkt ponownie. Porównaj sprzedawcę, identyfikator oferty i wariant. Podobne zdjęcie nie oznacza tego samego produktu."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/nyzcb/">
+</head>
+
+<body>
+  <header class="wrap masthead">
+    <a class="logo" href="https://www.cafans.com" aria-label="cafans.com — strona główna">cafans<span>.com</span></a>
+    <p>NOTATNIK ZAKUPOWY / WERSJA POLSKA</p>
+    <a class="header-action" href="https://www.cafans.com">Otwórz katalog ↗</a>
+  </header>
+
+  <main class="wrap">
+    <nav class="categories" aria-label="Kategorie produktów w cafans.com">
+      <div class="category-intro">
+        <h2>Zacznij od kategorii</h2>
+        <p>Bezpośrednie przejście do cafans.com</p>
+      </div>
+      <div class="category-grid">
+        <a href="https://cafans.com/category-911-Shoes.html"><span>01</span> Shoes — buty</a>
+        <a href="https://cafans.com/category-912-Hoodies%2FSweaters.html"><span>02</span> Hoodies/Sweaters</a>
+        <a href="https://cafans.com/category-913-T-Shirts.html"><span>03</span> T-Shirts — koszulki</a>
+        <a href="https://cafans.com/category-914-Jackets.html"><span>04</span> Jackets — kurtki</a>
+        <a href="https://cafans.com/category-915-Pants%2FShorts.html"><span>05</span> Pants/Shorts</a>
+        <a href="https://cafans.com/category-916-Headwear.html"><span>06</span> Headwear — czapki</a>
+        <a href="https://cafans.com/category-917-Sets.html"><span>07</span> Sets — komplety</a>
+        <a href="https://cafans.com/category-918-underwear%2Funderpants.html"><span>08</span> Underwear/underpants</a>
+        <a href="https://cafans.com/category-919-Jersey.html"><span>09</span> Jersey — sport</a>
+        <a href="https://cafans.com/category-920-Accessories.html"><span>10</span> Accessories — dodatki</a>
+      </div>
+    </nav>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Mniej zgadywania. Więcej szczegółów.</p>
+        <h1 id="hero-title">KameyMall spreadsheet</h1>
+        <p>Dobry wybór zaczyna się od konkretnej oferty. Odkrywaj kategorie, porównuj wymiary i sprawdzaj szczegóły, zanim podejmiesz decyzję.</p>
+        <a class="button" href="https://www.cafans.com">Przeglądaj w cafans.com <span aria-hidden="true">↗</span></a>
+        <p class="disclosure">Niezależny przewodnik. Linki zakupowe prowadzą do cafans.com. Brak oficjalnego powiązania z KameyMall i pokazanymi markami.</p>
+      </div>
+      <figure class="hero-art">
+        <img
+          src="https://www.tike.gr/files/images/products/media/CW2/CW2288-111/images/CW2288-111.jpg.webp"
+          alt="Biały Nike Air Force 1 ’07 z bocznym logo Swoosh i białą podeszwą"
+          width="640"
+          height="640"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async">
+        <figcaption><strong>Detal ma znaczenie.</strong><span>Nike / ilustracja stylu</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="answer" aria-labelledby="quick-answer">
+      <h2 id="quick-answer">Do czego służy taki arkusz?</h2>
+      <p><strong>KameyMall spreadsheet to punkt wyjścia do porównywania produktów.</strong> Pomaga uporządkować linki, kategorie i parametry. Nie zastępuje aktualnej oferty sprzedawcy: cenę, dostępność, wariant i warunki zakupu sprawdzaj na stronie docelowej.</p>
+    </section>
+
+    <section class="section" aria-labelledby="visual-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Kierunki stylistyczne</p>
+          <h2 id="visual-title">Od prostej bazy<br>do wyrazistego dodatku.</h2>
+        </div>
+        <p>Wybierz kategorię według tego, czego potrzebujesz. Zdjęcie potraktuj jako inspirację, a szczegóły sprawdź w ofercie.</p>
+      </div>
+
+      <div class="edit-grid">
+        <figure class="edit-card">
+          <a class="image-link" href="https://cafans.com/category-913-T-Shirts.html" aria-label="Przejdź do kategorii koszulek w cafans.com">
+            <img
+              src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-embroidered-signature-t-shirt--HVY19WNPG002_PM2_Front%20view.png?hei=640&amp;wid=640"
+              alt="Biała koszulka Louis Vuitton z haftowanymi motywami z przodu"
+              width="640" height="640" loading="lazy" decoding="async">
+          </a>
+          <figcaption>
+            <h3>Louis Vuitton / baza</h3>
+            <p>Przy koszulce porównaj szerokość pod pachami, długość i położenie szwu na ramieniu.</p>
+            <a class="text-link" href="https://cafans.com/category-913-T-Shirts.html">Zobacz kategorię koszulek ↗</a>
+          </figcaption>
+        </figure>
+
+        <figure class="edit-card">
+          <a class="image-link" href="https://cafans.com/category-916-Headwear.html" aria-label="Przejdź do kategorii nakryć głowy w cafans.com">
+            <img
+              src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg"
+              alt="Beżowo-brązowa czapka z daszkiem Gucci ze wzorem GG"
+              width="640" height="640" loading="lazy" decoding="async">
+          </a>
+          <figcaption>
+            <h3>Gucci / nakrycie głowy</h3>
+            <p>Sprawdź obwód, zakres regulacji oraz profil korony. Sam wzór nie mówi nic o dopasowaniu.</p>
+            <a class="text-link" href="https://cafans.com/category-916-Headwear.html">Zobacz kategorię czapek ↗</a>
+          </figcaption>
+        </figure>
+
+        <figure class="edit-card">
+          <a class="image-link" href="https://cafans.com/category-920-Accessories.html" aria-label="Przejdź do kategorii dodatków w cafans.com">
+            <img
+              src="https://www.luxe-em.com/cdn/shop/files/001_3e78aa64-04f3-4ec6-81eb-e3aad7cdb5bc.jpg?v=1759779439&amp;width=640"
+              alt="Pomarańczowa apaszka Hermès z ozdobnym motywem kluczy"
+              width="640" height="640" loading="lazy" decoding="async">
+          </a>
+          <figcaption>
+            <h3>Hermès / akcent koloru</h3>
+            <p>W dodatkach liczą się wymiary, wykończenie brzegów oraz opis materiału w konkretnej ofercie.</p>
+            <a class="text-link" href="https://cafans.com/category-920-Accessories.html">Zobacz kategorię dodatków ↗</a>
+          </figcaption>
+        </figure>
+
+        <figure class="edit-card">
+          <a class="image-link" href="https://cafans.com/category-920-Accessories.html" aria-label="Przejdź do kategorii akcesoriów w cafans.com">
+            <img
+              src="https://shopchelsearose.com/cdn/shop/files/3F850536-1F7F-4642-9A3B-8C2C6C31438B.png?v=1767649682&amp;width=640"
+              alt="Naszyjnik z zawieszką z napisem Dior w złotym kolorze"
+              width="640" height="640" loading="lazy" decoding="async">
+          </a>
+          <figcaption>
+            <h3>Dior / mały detal</h3>
+            <p>Przy biżuterii sprawdź długość łańcuszka, rodzaj zapięcia i deklarowany skład, zwłaszcza przy alergiach.</p>
+            <a class="text-link" href="https://cafans.com/category-920-Accessories.html">Zobacz kategorię akcesoriów ↗</a>
+          </figcaption>
+        </figure>
+      </div>
+
+      <p class="photo-note">Fotografie ilustrują styl i typ produktu. Nie potwierdzają dostępności tych modeli w cafans.com ani autentyczności innych ofert. Nazwy marek służą identyfikacji przedstawionych przedmiotów.</p>
+    </section>
+
+    <section class="method" aria-labelledby="method-title">
+      <p class="eyebrow">KameyMall poradnik / pierwszy wybór</p>
+      <h2 id="method-title">Trzy kroki do sensownej listy zakupów.</h2>
+      <div class="method-grid">
+        <div>
+          <span class="number" aria-hidden="true">01</span>
+          <h3>Zapisz dokładną ofertę</h3>
+          <p>Przeglądając KameyMall finds, zachowaj link, identyfikator produktu i nazwę sprzedawcy. Dodaj wybrany kolor oraz rozmiar. Podobne zdjęcie w dwóch ofertach nie oznacza tego samego przedmiotu.</p>
+        </div>
+        <div>
+          <span class="number" aria-hidden="true">02</span>
+          <h3>Porównuj ten sam wariant</h3>
+          <p>Sprawdź, którego wariantu dotyczy widoczna cena. Zestawienie ma sens, gdy porównujesz ten sam model, materiał, rozmiar i zakres dostawy. Zapisz datę sprawdzenia informacji.</p>
+        </div>
+        <div>
+          <span class="number" aria-hidden="true">03</span>
+          <h3>Zostaw miejsce na koszty</h3>
+          <p>Oddziel cenę produktu od kosztu doręczenia. Przed płatnością przeczytaj warunki zwrotu, zakres ewentualnej kontroli i końcowe podsumowanie opłat.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="guides-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Krótkie artykuły</p>
+          <h2 id="guides-title">Dwie kontrole, które warto wykonać.</h2>
+        </div>
+        <p>Praktyczne wskazówki do zastosowania przy każdej ofercie — niezależnie od zdjęcia i nazwy marki.</p>
+      </div>
+
+      <div class="article-grid">
+        <article class="article" aria-labelledby="sizing-title">
+          <p class="eyebrow">01 / dopasowanie</p>
+          <h3 id="sizing-title">KameyMall rozmiary: centymetry przed oznaczeniem</h3>
+          <p>Porównuj wymiary konkretnej oferty z ubraniem, które już dobrze leży. Nie zakładaj, że oznaczenie M lub rozmiar EU jest jednakowe u różnych sprzedawców.</p>
+          <ul>
+            <li><strong>Buty:</strong> sprawdź długość stopy i ustal, czy tabela opisuje stopę, czy wkładkę.</li>
+            <li><strong>Koszulki i bluzy:</strong> porównaj szerokość pod pachami, długość i rękawy.</li>
+            <li><strong>Kurtki:</strong> uwzględnij ubranie noszone pod spodem oraz szerokość ramion.</li>
+            <li><strong>Spodnie:</strong> sprawdź pas, biodra i długość nogawki; dopytaj, czy pas mierzono po rozciągnięciu.</li>
+          </ul>
+        </article>
+
+        <article class="article" aria-labelledby="qc-title">
+          <p class="eyebrow">02 / zgodność produktu</p>
+          <h3 id="qc-title">KameyMall QC: od ogólnego ujęcia do szczegółu</h3>
+          <p>Najpierw sprawdź zgodność modelu, koloru, rozmiaru i liczby sztuk. Następnie obejrzyj szwy, nadruk, zapięcia i widoczne uszkodzenia.</p>
+          <ul>
+            <li><strong>Ujęcie całości:</strong> porównaj fason i symetrię z wybranym wariantem.</li>
+            <li><strong>Zbliżenia:</strong> obejrzyj łączenia materiałów, metkę rozmiarową i wykończenia.</li>
+            <li><strong>Wątpliwości:</strong> poproś o dodatkowy pomiar lub zdjęcie przed kolejnym etapem zamówienia.</li>
+            <li><strong>Granice zdjęć:</strong> QC nie potwierdza samodzielnie autentyczności ani trwałości produktu.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="comparison-title">
+      <p class="eyebrow">Porównanie ofert</p>
+      <h2 id="comparison-title">Co sprawdzić zamiast zgadywać?</h2>
+      <div class="table-scroll" role="region" aria-label="Tabela kontroli produktu" tabindex="0">
+        <table>
+          <caption>Krótka lista do porównywania butów, odzieży i dodatków.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Element</th>
+              <th scope="col">Szukaj konkretu</th>
+              <th scope="col">Gdy brakuje informacji</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Model i wariant</th>
+              <td>Identyfikator oferty, kolor, wersja i wybrany rozmiar.</td>
+              <td>Poproś o potwierdzenie dokładnego wariantu.</td>
+            </tr>
+            <tr>
+              <th scope="row">Materiał</th>
+              <td>Opis składu i zdjęcie metki, jeśli jest dostępne.</td>
+              <td>Nie wnioskuj o składzie wyłącznie z połysku lub faktury zdjęcia.</td>
+            </tr>
+            <tr>
+              <th scope="row">Torby i dodatki</th>
+              <td>Wysokość, szerokość, głębokość oraz długość paska.</td>
+              <td>Poproś o wymiary w centymetrach i zdjęcie z miarką.</td>
+            </tr>
+            <tr>
+              <th scope="row">Kolor i wykończenie</th>
+              <td>Kilka ujęć, detale szwów i zdjęcia zbliżeń.</td>
+              <td>Uwzględnij różnice oświetlenia i ustawień ekranu.</td>
+            </tr>
+            <tr>
+              <th scope="row">Zwrot i dostawa</th>
+              <td>Warunki konkretnej transakcji, terminy i podsumowanie opłat.</td>
+              <td>Wyjaśnij zasady przed płatnością; nie opieraj się na starej notatce.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="budget-title">
+      <div class="budget">
+        <div>
+          <p class="eyebrow">KameyMall koszty wysyłki</p>
+          <h2 id="budget-title">Cena na karcie to dopiero część obrazu.</h2>
+          <p>Pełny budżet zależy od konkretnej oferty, sposobu zakupu i miejsca dostawy. Tutaj nie podajemy niezweryfikowanych stawek ani obietnic terminu.</p>
+        </div>
+        <ol>
+          <li><strong>Produkt:</strong> sprawdź cenę wybranego wariantu i ewentualną dostawę lokalną.</li>
+          <li><strong>Obsługa:</strong> sprawdź opłaty za płatność, dodatkowe zdjęcia, pakowanie lub inne wybrane usługi.</li>
+          <li><strong>Przesyłka:</strong> porównuj opcje dla tego samego kraju, wymiarów i sposobu pakowania. Sprawdź wagę rzeczywistą oraz gabarytową.</li>
+          <li><strong>Rozliczenie:</strong> uwzględnij właściwe podatki i należności. Nie doliczaj ponownie kwot już zawartych w podsumowaniu.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section faq-layout" aria-labelledby="faq-title">
+      <div class="faq-intro">
+        <p class="eyebrow">Bez zbędnego szukania</p>
+        <h2 id="faq-title">Pytania przed zakupem.</h2>
+        <p>Najkrótsza odpowiedź: korzystaj z katalogu do odkrywania, a decyzję oprzyj na aktualnej ofercie i jej warunkach.</p>
+        <a class="text-link" href="https://www.cafans.com">Przejdź do cafans.com ↗</a>
+      </div>
+
+      <div>
+        <details open>
+          <summary>Czym jest KameyMall spreadsheet?</summary>
+          <p>To arkusz lub katalog do porządkowania linków i informacji o produktach. Ułatwia porównanie kategorii, wariantów i rozmiarów, ale aktualne dane trzeba sprawdzić w konkretnej ofercie.</p>
+        </details>
+        <details>
+          <summary>Czy to oficjalna strona KameyMall?</summary>
+          <p>Nie. To niezależny przewodnik po polsku. Nie reprezentuje KameyMall ani pokazanych marek. Przyciski zakupowe prowadzą do cafans.com, a nie do KameyMall.</p>
+        </details>
+        <details>
+          <summary>Czy zdjęcia pokazują produkty dostępne w cafans.com?</summary>
+          <p>Zdjęcia są ilustracjami stylu i kategorii, a nie potwierdzeniem oferty. Sprawdź na stronie docelowej, czy konkretny model, wariant i rozmiar są dostępne.</p>
+        </details>
+        <details>
+          <summary>Jak dobrać rozmiar butów i ubrań?</summary>
+          <p>Korzystaj z tabeli konkretnej oferty i porównuj centymetry. Dla butów ustal, czy tabela podaje długość stopy czy wkładki; dla ubrań porównaj pomiary z dobrze dopasowaną rzeczą.</p>
+        </details>
+        <details>
+          <summary>Czy zdjęcia QC potwierdzają autentyczność?</summary>
+          <p>Nie. Zdjęcia QC pomagają ocenić widoczny stan i zgodność wariantu z zamówieniem. Same nie stanowią dowodu autentyczności, składu materiału ani trwałości.</p>
+        </details>
+        <details>
+          <summary>Czy cena produktu jest pełnym kosztem zamówienia?</summary>
+          <p>Niekoniecznie. Sprawdź dostawę lokalną i międzynarodową, ewentualne opłaty za obsługę, płatność i pakowanie oraz podatki i należności właściwe dla miejsca dostawy. Nie doliczaj ponownie kwot już zawartych w rozliczeniu.</p>
+        </details>
+        <details>
+          <summary>Co zrobić, gdy link lub wariant przestaje działać?</summary>
+          <p>Wróć do odpowiedniej kategorii w cafans.com i wyszukaj produkt ponownie. Porównaj sprzedawcę, identyfikator oferty i wariant. Podobne zdjęcie nie oznacza tego samego produktu.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div>
+        <h2 id="closing-title">Masz już swoją listę kontrolną.</h2>
+        <p>Wybierz kategorię, sprawdź szczegóły i porównaj aktualne oferty.</p>
+      </div>
+      <a class="button" href="https://www.cafans.com">Odkrywaj katalog <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <p>Niezależny materiał informacyjny w języku polskim. Nie przyjmujemy na tej stronie płatności ani zamówień. Znaki Nike, Louis Vuitton, Gucci, Hermès i Dior należą do ich właścicieli. Warunki transakcji oraz informacje o produkcie sprawdzaj u sprzedawcy.</p>
+      <a href="https://www.cafans.com">cafans.com ↗</a>
+    </div>
+  </footer>
+</body>
+</html>
